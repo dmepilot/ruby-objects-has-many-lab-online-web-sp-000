@@ -16,7 +16,7 @@ class Artist
   end
   
   def songs #returns all songs for a specific artist
-    Song.all 
+    Song.all.select {|song| song.artist == self}
   end
   
   def self.song_count #counts all the songs for a specific artist
